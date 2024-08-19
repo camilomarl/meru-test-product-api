@@ -56,6 +56,9 @@ class ProductsController < ApplicationController
 
   def set_product
     @product = Product.find(params[:id])
+  rescue ActiveRecord::RecordNotFound => e
+    Rails.logger.error "Error showing product: #{e.message}"
+    render json: { error: 'Product not found' }, status: :not_found
   end
 
   def product_params

@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< Updated upstream
 ActiveRecord::Schema[7.1].define(version: 2024_08_07_034729) do
   create_table "people", force: :cascade do |t|
     t.string "name"
@@ -17,6 +18,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_07_034729) do
     t.datetime "updated_at", null: false
   end
 
+=======
+ActiveRecord::Schema[7.1].define(version: 2024_08_16_000458) do
+>>>>>>> Stashed changes
   create_table "products", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

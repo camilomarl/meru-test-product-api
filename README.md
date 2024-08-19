@@ -1,24 +1,36 @@
-# README
+# MERU Products API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project contains a Rails project to manage a simple Products API
 
-Things you may want to cover:
+## Requirements
 
-* Ruby version
+- **Ruby version:** 3.3.4
 
-* System dependencies
+- **System dependencies:** To install the dependencies run `bundle install`
 
-* Configuration
+- **Database creation:** To create the required SQLite database run `rails db:migrate`
 
-* Database creation
+- **Database initialization:** To initialize the database, run `rails db:seed`
 
-* Database initialization
+- **How to run the test suite:** The test suite can be run with `bundle exec rspec`
 
-* How to run the test suite
+## How to run TL;DR
 
-* Services (job queues, cache servers, search engines, etc.)
+In your terminal run
 
-* Deployment instructions
+```
+bundle install
+rails db:migrate
+rails db:seed
+rails server
+```
 
-* ...
+The API should be running in [http://localhost:3000](http://localhost:3000)
+
+You can find the information of the user to login in to test in the file `db/seeds.rb`
+
+## How to run tests
+
+```
+bundle exec rspec
+```

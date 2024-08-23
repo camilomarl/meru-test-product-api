@@ -4,9 +4,11 @@ class ProductsController < ApplicationController
 
   # GET /products
   def index
-    @products = Product.all
-    Rails.logger.info "Products : #{@products.inspect}"
-    render json: @products
+    @pagy, @records = pagy(Product.all)
+    
+    Rails.logger.info "Products : #{@records.inspect}"
+    # render json: @products
+    render json: { data: @records, pagination: pagy_metadata(@pagy) }
   end
 
   def create
